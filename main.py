@@ -1,6 +1,8 @@
 from flask import Flask
 from flask import render_template
-app = Flask(__name__)
+from flask import url_for
+
+app = Flask(__name__, static_folder='./static/')
 
 @app.route('/',methods=["GET", "POST"])
 def happy_new_year():
